@@ -17,6 +17,7 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28D3F202112F7DC200FD0661 /* ShareBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* ShareBox.xcdatamodeld */; };
+		94335B92135C8B7300069F21 /* WebBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94335B91135C8B7300069F21 /* WebBaseViewController.m */; };
 		9460C820135BE2FB00309F2D /* SinaOAURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9460C81F135BE2FB00309F2D /* SinaOAURLRequest.m */; };
 		9460C82D135BE5DB00309F2D /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9460C82C135BE5DB00309F2D /* NSString+Additions.m */; };
 		9495A07F135BD52800A9F04C /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 9495A06C135BD52800A9F04C /* OAToken.m */; };
@@ -53,6 +54,8 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ShareBox-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ShareBox-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		94335B90135C8B7300069F21 /* WebBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebBaseViewController.h; sourceTree = "<group>"; };
+		94335B91135C8B7300069F21 /* WebBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebBaseViewController.m; sourceTree = "<group>"; };
 		943FEC8E1352F600006AE06B /* OAuthConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConstants.h; sourceTree = "<group>"; };
 		944428ED135BDC5C00992815 /* NIFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIFLog.h; sourceTree = "<group>"; };
 		9460C81E135BE2FB00309F2D /* SinaOAURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaOAURLRequest.h; sourceTree = "<group>"; };
@@ -186,6 +189,8 @@
 				9460C81E135BE2FB00309F2D /* SinaOAURLRequest.h */,
 				9460C81F135BE2FB00309F2D /* SinaOAURLRequest.m */,
 				94DAF2A2135C491400DAF173 /* WeiboProtocol.h */,
+				94335B90135C8B7300069F21 /* WebBaseViewController.h */,
+				94335B91135C8B7300069F21 /* WebBaseViewController.m */,
 			);
 			name = "SIna,QQ,Douban";
 			sourceTree = "<group>";
@@ -204,10 +209,10 @@
 				9495A06E135BD52800A9F04C /* OAConsumer.m */,
 				9495A06F135BD52800A9F04C /* OAMutableURLRequest.h */,
 				9495A070135BD52800A9F04C /* OAMutableURLRequest.m */,
+				9495A074135BD52800A9F04C /* OAPlaintextSignatureProvider.m */,
 				9495A071135BD52800A9F04C /* OAHMAC_SHA1SignatureProvider.h */,
 				9495A072135BD52800A9F04C /* OAHMAC_SHA1SignatureProvider.m */,
 				9495A073135BD52800A9F04C /* OAPlaintextSignatureProvider.h */,
-				9495A074135BD52800A9F04C /* OAPlaintextSignatureProvider.m */,
 				9495A075135BD52800A9F04C /* OARequestParameter.h */,
 				9495A076135BD52800A9F04C /* OARequestParameter.m */,
 				9495A077135BD52800A9F04C /* OAServiceTicket.h */,
@@ -330,6 +335,7 @@
 				9460C820135BE2FB00309F2D /* SinaOAURLRequest.m in Sources */,
 				9460C82D135BE5DB00309F2D /* NSString+Additions.m in Sources */,
 				94DAF29F135C473C00DAF173 /* SinaWeiboController.m in Sources */,
+				94335B92135C8B7300069F21 /* WebBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
