@@ -8,6 +8,7 @@
 
 #import "SinaOAURLRequest.h"
 #import "NSString+Additions.h"
+#import "ColorLog.h"
 
 @interface SinaOAURLRequest (Private)
 - (NSString *)_signatureBaseString;
@@ -123,6 +124,16 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider {
     for (OARequestParameter *param in [self parameters]) {
         [parameterPairs addObject:[param URLEncodedNameValuePair]];
     }
+	
+	for(NSString *parameterName in [[extraOAuthParameters allKeys] sortedArrayUsingSelector:@selector(compare:)])
+	{
+		NIF_INFO(@"---------------");
+		[parameterPairs addObject:[[OARequestParameter requestParameterWithName:parameterName value:[extraOAuthParameters objectForKey:parameterName]] URLEncodedNameValuePair]];
+		
+	}	
+	
+	
+	
     
     NSArray *sortedPairs = [parameterPairs sortedArrayUsingSelector:@selector(compare:)];
     NSString *normalizedRequestParameters = [sortedPairs componentsJoinedByString:@"&"];
@@ -133,6 +144,7 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider {
 					 [[[self URL] URLStringWithoutQuery] URLEncodedString],
 					 [normalizedRequestParameters URLEncodedString]];
     
+	NIF_INFO(LCL_YELLOW @"signed : %@",ret);
 	return ret;
 }
 

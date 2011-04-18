@@ -7,7 +7,7 @@
 //
 
 
-@protocol WeiboProtocol
+@protocol WeiboProtocol<NSObject>
 
 //- (void)controller:(id)controller serviceProvider:(NSInteger)provider verifySuccess:(NSString *)tip;
 //- (void)controller:(id)controller serviceProvider:(NSInteger)provider verifyFailed:(NSError *)error;

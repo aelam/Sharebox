@@ -6,13 +6,21 @@
 //  Copyright 2011 DDMap. All rights reserved.
 //
 
+typedef enum  {
+    kServiceProviderSinaWeibo		= 0,
+    kServiceProviderQZone,
+	kServiceProviderTotalCount,
+}kServiceProvider;
+
+
+
 #define CALL_BACK_URL           @"ddsharebox://"
 
 //
 // ---------------
 // Notification Name
 #define kSinaOAuthCallBackNotification  @"kSinaOAuthCallBackNotification"
-#define kQQOAuthCallBackNotification    @"kQQOAuthCallBackNotification"
+#define kQQOAuthCallBackNotification    @"kQQWeiboOAuthCallBackNotification"
 
 
 // SINA围脖
@@ -27,6 +35,9 @@
 #define SINA_ACCESS_ERROR_CODE	1001
 
 #define SINA_USERDEFAULT_KEY	@"SINA_USERDEFAULT_KEY"
-//#define
+
+#define SINA_USER_INFO_URL		@"http://api.t.sina.com.cn/users/show.json"
+#define SINA_UPDATE_URL			@"http://api.t.sina.com.cn/statuses/update.json"
+#define SINA_UPLOAD_IMAGE_URL	@"http://api.t.sina.com.cn/statuses/upload.json"
 
 // QQ围脖

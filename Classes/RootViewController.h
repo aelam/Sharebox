@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreData/CoreData.h>
-#import "OAuthConsumer.h"
-#import "OAuthConstants.h"
+#import "WeiboProtocol.h"
 
-@interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
+@class SinaWeiboController;
+@class WebBaseViewController;
+
+@interface RootViewController : UITableViewController <WeiboProtocol> {
     
-    OAConsumer *consumer;
-    OAHMAC_SHA1SignatureProvider *provider;
-    OAToken *token;
+	SinaWeiboController *sinaWeiboController;
+	WebBaseViewController *qzoneShareViewController;
 }
 
 @end

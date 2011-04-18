@@ -11,13 +11,6 @@
 #import "OAuthConstants.h"
 #import "WeiboProtocol.h"
 
-typedef enum  {
-    kServiceProviderSina,
-    kServiceProviderTencent,
-	//    kServiceProviderSina,
-}kServiceProvider;
-
-
 @interface SinaWeiboController : NSObject {
 	
 	BOOL							isVerified;
@@ -35,8 +28,7 @@ typedef enum  {
 
 - (void)startRequestToken;
 
-
-
+- (void)updateStatus:(NSString *)status;
 - (void)postStatus:(NSString *)status image:(UIImage *)image;
 
 @end

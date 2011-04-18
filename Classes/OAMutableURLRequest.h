@@ -48,6 +48,8 @@
 @property(readonly) NSString *signature;
 @property(readonly) NSString *nonce;
 
+@property (retain) 	NSMutableDictionary *extraOAuthParameters;
+
 - (id)initWithURL:(NSURL *)aUrl
 		 consumer:(OAConsumer *)aConsumer
 			token:(OAToken *)aToken

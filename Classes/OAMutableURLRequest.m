@@ -32,7 +32,7 @@
 @end
 
 @implementation OAMutableURLRequest
-@synthesize signature, nonce;
+@synthesize signature, nonce,extraOAuthParameters;
 
 #pragma mark init
 
@@ -200,7 +200,7 @@ signatureProvider:(id<OASignatureProviding, NSObject>)aProvider
     for (OARequestParameter *param in [self parameters]) {
         [parameterPairs addObject:[param URLEncodedNameValuePair]];
     }
-    
+	    
     NSArray *sortedPairs = [parameterPairs sortedArrayUsingSelector:@selector(compare:)];
     NSString *normalizedRequestParameters = [sortedPairs componentsJoinedByString:@"&"];
     
