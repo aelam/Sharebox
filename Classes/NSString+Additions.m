@@ -15,6 +15,19 @@
     return [NSString stringWithFormat:@"%d", time(NULL)];
 }
 
++ (NSString *)qq_nonce {
+	CFUUIDRef theUUID = CFUUIDCreate(NULL);
+	CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+	CFRelease(theUUID);
+	//	return [(NSString *)string autorelease];
+	NSString *subString = [(NSString *)string substringToIndex:20];
+	//	RLog(@"nonce :%d",[(NSString *)subString length]);
+	[(NSString *)string autorelease];
+	return subString;
+	
+}
+
+
 + (NSString *)nonce  {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
     CFStringRef string = CFUUIDCreateString(NULL, theUUID);

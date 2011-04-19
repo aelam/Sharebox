@@ -11,10 +11,12 @@
 
 @class SinaWeiboController;
 @class WebBaseViewController;
+@class QQWeiboController;
 
 @interface RootViewController : UITableViewController <WeiboProtocol> {
     
 	SinaWeiboController *sinaWeiboController;
+	QQWeiboController *qqWeiboController;
 	WebBaseViewController *qzoneShareViewController;
 }
 

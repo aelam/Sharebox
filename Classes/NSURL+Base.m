@@ -35,4 +35,22 @@
     return [parts objectAtIndex:0];
 }
 
++ (NSDictionary *)parseURLQueryString:(NSString *)queryString {
+	
+	NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+	NSArray *pairs = [queryString componentsSeparatedByString:@"&"];
+	for(NSString *pair in pairs) {
+		NSArray *keyValue = [pair componentsSeparatedByString:@"="];
+		if([keyValue count] == 2) {
+			NSString *key = [keyValue objectAtIndex:0];
+			NSString *value = [keyValue objectAtIndex:1];
+			value = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+			if(key && value)
+				[dict setObject:value forKey:key];
+		}
+	}
+	return [NSDictionary dictionaryWithDictionary:dict];
+}
+
+
 @end

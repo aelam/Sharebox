@@ -10,6 +10,7 @@
 #import "ColorLog.h"
 #import "SinaWeiboController.h"
 #import "WebBaseViewController.h"
+#import "QQWeiboController.h"
 
 @implementation RootViewController
 
@@ -59,8 +60,11 @@
     
 	if (indexPath.row == kServiceProviderSinaWeibo) {
 		cell.textLabel.text = @"新浪微博";
-	} else if (indexPath.row == kServiceProviderQZone) {
+	} else if (indexPath.row == kServiceProviderQQWeibo) {
 		cell.textLabel.text = @"腾讯微博";
+	}
+	else if (indexPath.row == kServiceProviderQZone) {
+		cell.textLabel.text = @"QQ空间";
 	}
     // Configure the cell...
     
@@ -76,7 +80,17 @@
 		}
 		//[sinaWeiboController startRequestToken];
 		[sinaWeiboController updateStatus:@"OKOK"];
-	} else if (indexPath.row == kServiceProviderQZone) {
+	} else if (indexPath.row == kServiceProviderQQWeibo) {
+		if (qqWeiboController == nil) {
+			qqWeiboController = [[QQWeiboController alloc] initWithDelegate:self];			
+		}
+		//[qqWeiboController startRequestToken];
+		//[qqWeiboController updateStatus:@"OKOK"];
+		UIImage *image = [UIImage imageNamed:@"post.png"];
+		[qqWeiboController postStatus:@"___STATUS" image:image];
+	}
+	
+	else if (indexPath.row == kServiceProviderQZone) {
 		if (qzoneShareViewController == nil) {
 			qzoneShareViewController = [[WebBaseViewController alloc] init];
 		}

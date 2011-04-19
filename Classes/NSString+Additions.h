@@ -13,5 +13,6 @@
 
 + (NSString *)timestamp;
 + (NSString *)nonce;
++ (NSString *)qq_nonce;
 
 @end

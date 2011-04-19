@@ -31,4 +31,6 @@
 
 - (NSString *)URLStringWithoutQuery;
 
++ (NSDictionary *)parseURLQueryString:(NSString *)queryString;
+
 @end

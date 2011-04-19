@@ -9,7 +9,7 @@
 #import "SinaWeiboController.h"
 #import "ColorLog.h"
 
-BOOL hasVerified() {
+BOOL hasSinaVerified() {
 	NSString *verifer = [[NSUserDefaults standardUserDefaults] valueForKey:SINA_USERDEFAULT_KEY];
 	if (verifer && [verifer length]) {
 		return YES;
@@ -32,7 +32,7 @@ BOOL hasVerified() {
 - (id)initWithDelegate:(id<WeiboProtocol>)aDelegate {
 	if (self = [super init]) {
 		_delegate = aDelegate;
-		isVerified = hasVerified();
+		isVerified = hasSinaVerified();
 		
 		consumer = [[OAConsumer alloc] initWithKey:SINA_APP_KEY secret:SINA_APP_SECRET];
 		signatureProvider = [[OAHMAC_SHA1SignatureProvider alloc] init];

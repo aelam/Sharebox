@@ -44,6 +44,14 @@
         
         // QQ
         
+        range = [[url absoluteString] rangeOfString:kQQWeiboOAuthCallBackNotification];
+		if (range.length > 0) {
+			
+			NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[url absoluteString] forKey:kQQWeiboOAuthCallBackNotification];
+			[[NSNotificationCenter defaultCenter] postNotificationName:kQQWeiboOAuthCallBackNotification object:nil userInfo:userInfo];
+			
+			return YES;
+        }
         
     
             

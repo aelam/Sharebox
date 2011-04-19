@@ -18,6 +18,9 @@
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28D3F202112F7DC200FD0661 /* ShareBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* ShareBox.xcdatamodeld */; };
 		94335B92135C8B7300069F21 /* WebBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94335B91135C8B7300069F21 /* WebBaseViewController.m */; };
+		94335FA7135DF44A00069F21 /* QQWeiboController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94335FA6135DF44A00069F21 /* QQWeiboController.m */; };
+		94335FBD135DF4DC00069F21 /* QQOAURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 94335FBC135DF4DC00069F21 /* QQOAURLRequest.m */; };
+		943361B3135E15F200069F21 /* post.png in Resources */ = {isa = PBXBuildFile; fileRef = 943361B2135E15F200069F21 /* post.png */; };
 		9460C820135BE2FB00309F2D /* SinaOAURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9460C81F135BE2FB00309F2D /* SinaOAURLRequest.m */; };
 		9460C82D135BE5DB00309F2D /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9460C82C135BE5DB00309F2D /* NSString+Additions.m */; };
 		9495A07F135BD52800A9F04C /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 9495A06C135BD52800A9F04C /* OAToken.m */; };
@@ -56,6 +59,11 @@
 		8D1107310486CEB800E47090 /* ShareBox-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ShareBox-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		94335B90135C8B7300069F21 /* WebBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebBaseViewController.h; sourceTree = "<group>"; };
 		94335B91135C8B7300069F21 /* WebBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebBaseViewController.m; sourceTree = "<group>"; };
+		94335FA5135DF44A00069F21 /* QQWeiboController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQWeiboController.h; sourceTree = "<group>"; };
+		94335FA6135DF44A00069F21 /* QQWeiboController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQWeiboController.m; sourceTree = "<group>"; };
+		94335FBB135DF4DC00069F21 /* QQOAURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQOAURLRequest.h; sourceTree = "<group>"; };
+		94335FBC135DF4DC00069F21 /* QQOAURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQOAURLRequest.m; sourceTree = "<group>"; };
+		943361B2135E15F200069F21 /* post.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post.png; sourceTree = "<group>"; };
 		943FEC8E1352F600006AE06B /* OAuthConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConstants.h; sourceTree = "<group>"; };
 		944428ED135BDC5C00992815 /* NIFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIFLog.h; sourceTree = "<group>"; };
 		9460C81E135BE2FB00309F2D /* SinaOAURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaOAURLRequest.h; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				943361B2135E15F200069F21 /* post.png */,
 				28D3F201112F7DC200FD0661 /* ShareBox.xcdatamodeld */,
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
@@ -186,8 +195,12 @@
 				943FEC8E1352F600006AE06B /* OAuthConstants.h */,
 				94DAF29D135C473C00DAF173 /* SinaWeiboController.h */,
 				94DAF29E135C473C00DAF173 /* SinaWeiboController.m */,
+				94335FA5135DF44A00069F21 /* QQWeiboController.h */,
+				94335FA6135DF44A00069F21 /* QQWeiboController.m */,
 				9460C81E135BE2FB00309F2D /* SinaOAURLRequest.h */,
 				9460C81F135BE2FB00309F2D /* SinaOAURLRequest.m */,
+				94335FBB135DF4DC00069F21 /* QQOAURLRequest.h */,
+				94335FBC135DF4DC00069F21 /* QQOAURLRequest.m */,
 				94DAF2A2135C491400DAF173 /* WeiboProtocol.h */,
 				94335B90135C8B7300069F21 /* WebBaseViewController.h */,
 				94335B91135C8B7300069F21 /* WebBaseViewController.m */,
@@ -303,6 +316,7 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
+				943361B3135E15F200069F21 /* post.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +350,8 @@
 				9460C82D135BE5DB00309F2D /* NSString+Additions.m in Sources */,
 				94DAF29F135C473C00DAF173 /* SinaWeiboController.m in Sources */,
 				94335B92135C8B7300069F21 /* WebBaseViewController.m in Sources */,
+				94335FA7135DF44A00069F21 /* QQWeiboController.m in Sources */,
+				94335FBD135DF4DC00069F21 /* QQOAURLRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

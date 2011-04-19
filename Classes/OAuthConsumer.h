@@ -39,6 +39,8 @@
 //#import <OAuthConsumer/OAAsynchronousDataFetcher.h>
 
 #import <Foundation/Foundation.h>
+#import "OAuthConstants.h"
+
 #import "OAToken.h"
 #import "OAConsumer.h"
 #import "OAMutableURLRequest.h"
@@ -54,3 +56,4 @@
 #import "OAAsynchronousDataFetcher.h"
 
 #import "SinaOAURLRequest.h"
+#import "QQOAURLRequest.h"
